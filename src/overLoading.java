@@ -1,5 +1,3 @@
-package functions;
-
 public class overLoading {
     public static void main(String[] args) {
         // overloading means : same function name and different no of parameters and their type
