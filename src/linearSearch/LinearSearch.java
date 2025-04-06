@@ -7,7 +7,7 @@ public class LinearSearch {
 
        boolean exist = ls(arr, target);
        if(exist == true) {
-           System.out.println("element exists");
+           System.out.println("element exists in the array");
        } else {
            System.out.println("element doesnot exists");
        }
