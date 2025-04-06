@@ -35,8 +35,6 @@ public class LinearSearch {
         for (int j : arr) {
             if (target == j) {
                 return j;
-            } else {
-                continue;
             }
         }
 
