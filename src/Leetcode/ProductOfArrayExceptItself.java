@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package Leetcode;
+
 import java.util.Arrays;
 
 public class ProductOfArrayExceptItself {
