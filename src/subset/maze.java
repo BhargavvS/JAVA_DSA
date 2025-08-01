@@ -57,12 +57,12 @@ public class maze {
         }
 
         if(r>1){
-            mazeCountPrint(p+'D',r-1,c);
+            mazeList(p+'D',r-1,c);
 
         }
 
         if(c>1) {
-            mazeCountPrint(p + 'R', r, c - 1);
+            mazeList(p + 'R', r, c - 1);
         }
 
     }
