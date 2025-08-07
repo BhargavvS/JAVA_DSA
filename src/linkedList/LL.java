@@ -50,6 +50,7 @@ public class LL {
               System.out.print(temp.val + " -> ");
               temp = temp.next;
           }
+          System.out.print("END");
       }
 
     public void addFirst(int val) {
@@ -66,7 +67,7 @@ public class LL {
     public void deleteLast() {
           temp = head;
         Node prev= temp;
-          if(head == null) return;
+          if(head == null)  return;
           else {
               while(temp.next != null) {
                   prev = temp;
@@ -76,6 +77,23 @@ public class LL {
               prev.next = null;
 
           }
+    }
+
+    public Node reverseList(Node head){
+          if(head == null) return head;
+
+          Node temp;
+          Node prev = null;
+
+          while(head != null){
+              temp = head.next;
+              head.next =prev;
+              prev = head;
+              head = temp;
+          }
+
+          head = prev;
+          return head;
     }
 
 
