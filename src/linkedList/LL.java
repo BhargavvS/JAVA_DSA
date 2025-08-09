@@ -96,6 +96,68 @@ public class LL {
           return head;
     }
 
+    public void insertRecursion(int val,int index){
+        head = insertRecursion(val,index,head);
+    }
+
+    private Node insertRecursion(int val,int index,Node node){
+          if(index == 0){
+              Node temp = new Node(val);
+              temp.next = node;
+              size++;
+              return temp;
+          }
+
+          node.next = insertRecursion(val,index-1,node.next);
+
+          return node;
+    }
+
+    public Node removeDuplicate(Node head){
+          Node temp = head;
+
+          while(temp.next!= null){
+              if(temp.val == temp.next.val){
+                  temp.next = temp.next.next;
+                  size--;
+              } else{
+                  temp = temp.next;
+              }
+          }
+
+          return head;
+    }
+
+    public static LL mergeTwoLists(LL list1, LL list2) {
+          Node head1 = list1.head;
+          Node head2 = list2.head;
+          LL ans = new LL();
+
+          while(head1 != null && head2 != null){
+              if(head1.val <= head2.val){
+                  ans.addLast(head1.val);
+                  head1= head1.next;
+              }else{
+                  ans.addLast(head2.val);
+                  head2= head2.next;
+              }
+          }
+
+          while (head1 != null){
+              ans.addLast(head1.val);
+              head1 = head1.next;
+          }
+
+          while (head2 != null){
+              ans.addLast(head2.val);
+              head2= head2.next;
+          }
+
+          return ans;
+
+
+    }
+
 
 
 }
