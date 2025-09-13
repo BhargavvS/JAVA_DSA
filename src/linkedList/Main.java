@@ -1,6 +1,9 @@
 package linkedList;
 
+import org.w3c.dom.NodeList;
+
 import static linkedList.LL.mergeTwoLists;
+import static linkedList.LL.middleOfList;
 
 
 public class Main {
@@ -19,32 +22,19 @@ public class Main {
         System.out.println();
         list2.display();
         System.out.println();
-        System.out.println("Merged Linked List");
-//        list.deleteLast();
+//        Node middle = (Node) middleOfList(list1.head);
+//        System.out.println("Middle Node of list1 is " + middle );
+
+
+
+
+//        System.out.println("Merged Linked List");
+//        LL ans = mergeTwoLists(list1,list2);
+//        ans.display();
+//        list.insertRecursion(10,3);
 //        System.out.println("After the reversing the list");
 //        list.head = list.reverseList(list.head);
-//        list.insertRecursion(10,3);
-        LL ans = mergeTwoLists(list1,list2);
-        ans.display();
 
 
-        System.out.println();
-
-
-        System.out.println();
-
-//        doublyLL dlist = new doublyLL();
-//        dlist.addLast(1);
-//        dlist.addLast(2);
-//        dlist.addLast(3);
-//        dlist.addLast(4);
-//        dlist.addLast(5);
-//
-//        dlist.display();
-//        System.out.println();
-//        System.out.println("After reversal");
-//
-//        dlist.head = dlist.reverseDList(dlist.head);
-//        dlist.display();
     }
 }

@@ -75,4 +75,20 @@ public class doublyLL {
         return head;
 
     }
+
+    public static void main(String[] args) {
+        doublyLL dlist = new doublyLL();
+        dlist.addLast(1);
+        dlist.addLast(2);
+        dlist.addLast(3);
+        dlist.addLast(4);
+        dlist.addLast(5);
+
+        dlist.display();
+        System.out.println();
+        System.out.println("After reversal");
+
+        dlist.head = dlist.reverseDList(dlist.head);
+        dlist.display();
+    }
 }

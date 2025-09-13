@@ -1,5 +1,9 @@
 package DynamicProgramming;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.util.ArrayList;
+import java.util.List;
+
 public class sumValue {
     public static void main(String[] args) {
         int[] nums = {3,2,6,8,10,1,1,5,6,1,5,7,6,0,9,1,2,4,5,6,8,2,4,7,9,1,2,3,10,11,36,35,41,1000,1800,20000,30000000};
@@ -27,6 +31,32 @@ public class sumValue {
           return t[n][sum] =  sumValueBoolean(nums,sum,n-1,t);
         }
 
-
     }
+
+//    public static void  sumValuePrint(int[] nums,int sum,int n,Integer[][] t){
+//        if(sum == 0 && n==0 ) {
+//            System.out.println(nums[n]);
+//            return;
+//        }
+//
+//        if(sum == 0){
+//            System.out.println(nums[n]);
+//            return;
+//        }
+//        if(n==0){
+//            return;
+//        }
+//
+////        if(t[n][sum] != null) System.out.println(t[n][sum]);
+//
+//        List<List<Integer>> ans = new ArrayList<>();
+//        if(nums[n] <= sum){
+//            sumValuePrint(nums,sum-nums[n],n-1,t) ;
+//            sumValuePrint(nums,sum,n-1,t);
+//
+//
+//        } else{
+//            sumValueList(nums,sum,n-1,t);
+//        }
+//    }
 }

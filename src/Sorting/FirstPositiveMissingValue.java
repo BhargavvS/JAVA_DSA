@@ -3,9 +3,10 @@ package Sorting;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+// example of cyclic sort
 public class FirstPositiveMissingValue {
     public static void main(String[] args) {
-        int[] nums = {1};
+        int[] nums = {1,2,4};
         System.out.println(firstMissingPositive(nums));
     }
 

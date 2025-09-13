@@ -6,10 +6,13 @@ import java.util.List;
 public class permutationMain {
     public static void main(String[] args) {
             perm("","abc");
-            List<String> ans = permList("","abc");
-        System.out.println(ans);
-
-        System.out.println(permCount("","abc"));
+//            List<String> ans = permList("","abc");
+//        System.out.println(ans);
+//
+//        System.out.println(permCount("","abc"));
+//        permNum(0,123);
+//        List<Integer> list = permNumList(0,1234);
+//        System.out.println(list);
     }
 
     public static void perm(String p, String up){
@@ -59,5 +62,49 @@ public class permutationMain {
 
         return count;
     }
+
+    public static void permNum(int p, int up){
+        if(up%10 == 0){
+            System.out.println(reverse(p));
+            return;
+        }
+        int num = up%10;
+        permNum(p*10 + num,up/10);
+        permNum(p,up/10);
+
+        return;
+    }
+
+    public static List<Integer> permNumList(int p, int up){
+        if(up%10 == 0){
+            List<Integer>  list = new ArrayList<>();
+            list.add(reverse(p));
+            return list;
+        }
+
+        List<Integer> result = new ArrayList<>();
+        int num = up%10;
+       List<Integer> left =  permNumList(p*10 + num,up/10);
+        List<Integer> right = permNumList(p,up/10);
+
+        result.addAll(left);
+        result.addAll(right);
+
+        return result;
+    }
+
+
+    private static int reverse(int num){
+        int r=0;
+
+        while(num >0){
+            int n = num %10;
+            r = r*10 + n;
+            num /=10;
+        }
+
+        return  r;
+    }
+
 
 }
