@@ -7,10 +7,12 @@ public class subseqMain {
     public static void main(String[] args) {
         ArrayList<String> list = subseqList("","abc");
 
-        Iterator<String> it = list.iterator();
-        while(it.hasNext()){
-            System.out.println(it.next());
-        }
+//        Iterator<String> it = list.iterator();
+//        while(it.hasNext()){
+//            System.out.println(it.next());
+//        }
+
+        System.out.println(isSubsequence("rjufvjafbxnbgriwgokdgqdqewn","mjmqqjrmzkvhxlyruonekhhofpzzslupzojfuoztvzmmqvmlhgqxehojfowtrinbatjujaxekbcydldglkbxsqbbnrkhfdnpfbuaktupfftiljwpgglkjqunvithzlzpgikixqeuimmtbiskemplcvljqgvlzvnqxgedxqnznddkiujwhdefziydtquoudzxstpjjitmiimbjfgfjikkjycwgnpdxpeppsturjwkgnifinccvqzwlbmgpdaodzptyrjjkbqmgdrftfbwgimsmjpknuqtijrsnwvtytqqvookinzmkkkrkgwafohflvuedssukjgipgmypakhlckvizmqvycvbxhlljzejcaijqnfgobuhuiahtmxfzoplmmjfxtggwwxliplntkfuxjcnzcqsaagahbbneugiocexcfpszzomumfqpaiydssmihdoewahoswhlnpctjmkyufsvjlrflfiktndubnymenlmpyrhjxfdcq"));
     }
 
     public static void subseq(String p, String up){
@@ -38,5 +40,17 @@ public class subseqMain {
 
         left.addAll(right);
         return left;
+    }
+
+
+    public static boolean isSubsequence(String s, String t) {
+        int i = 0, j = 0;
+        while (i < s.length() && j < t.length()) {
+            if (s.charAt(i) == t.charAt(j)) {
+                i++; // matched character in s
+            }
+            j++; // always move in t
+        }
+        return i == s.length();
     }
 }
